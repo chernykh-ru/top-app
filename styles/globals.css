@@ -2,6 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+
   color: var(--black);
   background: #F5F6F8;
 
@@ -20,10 +21,16 @@ a {
 
 :root {
   --black: #3B434E;
+  --gray-light: #EBEBEB;
   --white: #FFF;
   --primary: #7653FC;
+  --primary-hover: #5D37F7;
   --red: #FC836D;
   --green: #1DC37E;
   --green-light: #C8F8E4;
   --font-family: "Noto Sans Display", sans-serif;
+
+  /* --font-size-p-sm: 14px;
+  --font-size-p-md: 16px;
+  --font-size-p-lg: 18px; */
 }
