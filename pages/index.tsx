@@ -1,10 +1,13 @@
-import { Button, Htag, P, Tag } from '../components';
+import { useState } from 'react';
+import { Button, Htag, P, Tag, Rating } from '../components';
 
 export default function Home(): JSX.Element {
+  const [rating, setRating] = useState<number>(0);
+
   return (
     <>
       <Htag tag='h1'>Hello</Htag>
-      <Button appearance='primary' arrow='right' onClick={() => alert('touched')}>
+      <Button appearance='primary' arrow='right'>
         Push me
       </Button>
       <Button appearance='ghost' arrow='right'>
@@ -34,6 +37,8 @@ export default function Home(): JSX.Element {
       <Tag size='sm' color='ghost'>
         Дизайн
       </Tag>
+      <Rating rating={rating} isEditable={true} setRating={setRating} />
+      <Rating rating={3} />
     </>
   );
 }
