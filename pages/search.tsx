@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import axios from 'axios';
 import { GetStaticProps } from 'next';
 import { withLayout } from '../layout/Layout';

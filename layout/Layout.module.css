@@ -1,7 +1,7 @@
 .wrapper {
   display: grid;
   min-height: 100vh;
-  gap: 0 30px;
+  gap: 40px 30px;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: auto 230px minmax(320px, 1200px) auto;
   grid-template-areas: 
@@ -22,8 +22,12 @@
       ;
   }
 
+  .body {
+    padding: 20px;
+  }
+
   .sidebar {
-    display: none;
+    display: none !important;
   }
 
   .header {
