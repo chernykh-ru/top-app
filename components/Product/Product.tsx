@@ -19,8 +19,7 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
           alt={product.title}
           width={70}
           height={70}
-          layout='responsive'
-          quality={90}
+          quality={80}
         />
       </div>
       <div className={styles.title}>{product.title}</div>
