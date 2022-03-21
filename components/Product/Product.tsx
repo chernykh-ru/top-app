@@ -10,6 +10,7 @@ import { Button } from '../Button/Button';
 import { declOfNumber, priceRu } from '../../helpers/helpers';
 import { Divider } from '../Divider/Divider';
 import { Review } from '../Review/Review';
+import { ReviewForm } from '../ReviewForm/ReviewForm';
 
 export const Product = ({ product, className, ...props }: ProductProps): JSX.Element => {
   const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
@@ -105,6 +106,7 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
             <Divider />
           </>
         ))}
+        <ReviewForm productId={product._id} />
       </Card>
     </>
   );
