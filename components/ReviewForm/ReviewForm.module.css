@@ -7,7 +7,11 @@
   align-items: center;
 }
 
-.submit, .description {
+.submit {
+  grid-column: start / end;
+}
+
+.description {
   grid-column: start / end;
 }
 
@@ -63,13 +67,5 @@
 @media screen and (max-width: 640px) {
   .reviewForm {
     grid-template-columns: [start] 1fr [end];
-  }
-
-  .title {
-    justify-self: normal;
-  }
-
-  .rating {
-    grid-column: start / end;
   }
 }
