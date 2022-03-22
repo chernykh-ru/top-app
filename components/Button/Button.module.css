@@ -2,7 +2,7 @@
   display: inline-block;
   box-sizing: border-box;
   padding: 10px;
-  
+
   cursor: pointer;
   transition: all 0.3s;
   text-align: center;
@@ -43,8 +43,13 @@
 }
 
 .down {
-  transition: all 0.3s;
+  transition: all 0.5s;
   transform: rotate(90deg);
+}
+
+.right {
+  transition: all 0.5s;
+  transform: rotate(0);
 }
 
 .primary svg,

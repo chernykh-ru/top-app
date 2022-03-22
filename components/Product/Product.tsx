@@ -18,6 +18,14 @@ export const Product = motion(
     const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
     const reviewRef = useRef<HTMLDivElement>(null);
 
+    const variants = {
+      visible: {
+        opacity: 1,
+        height: 'auto',
+      },
+      hidden: { opacity: 0, height: 0 },
+    };
+
     const scrollToReview = () => {
       setIsReviewOpened(true);
       reviewRef.current?.scrollIntoView({
@@ -107,21 +115,21 @@ export const Product = motion(
             </Button>
           </div>
         </Card>
-        <Card
-          color='blue'
-          ref={reviewRef}
-          className={cn(styles.reviews, {
-            [styles.opened]: isReviewOpened,
-            [styles.closed]: !isReviewOpened,
-          })}>
-          {product.reviews.map((r) => (
-            <div key={r._id}>
-              <Review review={r} />
-              <Divider />
-            </div>
-          ))}
-          <ReviewForm productId={product._id} />
-        </Card>
+        <motion.div
+          variants={variants}
+          initial='hidden'
+          animate={isReviewOpened ? 'visible' : 'hidden'}
+          transition={{ duration: 0.5 }}>
+          <Card color='blue' ref={reviewRef} className={cn(styles.reviews)}>
+            {product.reviews.map((r) => (
+              <div key={r._id}>
+                <Review review={r} />
+                <Divider />
+              </div>
+            ))}
+            <ReviewForm productId={product._id} />
+          </Card>
+        </motion.div>
       </div>
     );
   }),

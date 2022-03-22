@@ -15,3 +15,9 @@
   height: 30px;
   padding: 7px;
 }
+
+.button svg {
+  position: absolute;
+  top: 7px;
+  left: 8px;
+}
