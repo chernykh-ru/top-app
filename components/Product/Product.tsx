@@ -11,9 +11,10 @@ import { declOfNumber, priceRu } from '../../helpers/helpers';
 import { Divider } from '../Divider/Divider';
 import { Review } from '../Review/Review';
 import { ReviewForm } from '../ReviewForm/ReviewForm';
+import { motion } from 'framer-motion';
 
-export const Product = forwardRef(
-  ({ product, className, ...props }: ProductProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
+export const Product = motion(
+  forwardRef(({ product, className, ...props }: ProductProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
     const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
     const reviewRef = useRef<HTMLDivElement>(null);
 
@@ -123,5 +124,5 @@ export const Product = forwardRef(
         </Card>
       </div>
     );
-  },
+  }),
 );
