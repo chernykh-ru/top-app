@@ -4,7 +4,7 @@
   max-width: 1360px;
   gap: 40px 30px;
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: auto 230px minmax(480px, 1200px) auto;
+  grid-template-columns: auto 230px minmax(320px, 1200px) auto;
   grid-template-areas: 
     ". header header ."
     ". sidebar body ."
@@ -12,15 +12,34 @@
     ;
 }
 
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.body {
+  grid-area: body;
+
+  outline: none;
+}
+
+.footer {
+  grid-area: footer;
+}
+
 @media screen and (max-width: 768px) {
   .wrapper {
     grid-template-rows: auto 1fr auto;
-    grid-template-columns: minmax(480px, 1fr);
+    grid-template-columns: minmax(320px, 1fr);
     grid-template-areas: 
       "header"
       "body"
       "footer"
       ;
+    gap: 10px;
   }
 
   .body {
@@ -31,25 +50,4 @@
     display: none !important;
   }
 
-  .header {
-    display: block;
-  }
-
-}
-
-.header {
-  grid-area: header;
-  display: none;
-}
-
-.sidebar {
-  grid-area: sidebar;
-}
-
-.body {
-  grid-area: body;
-}
-
-.footer {
-  grid-area: footer;
 }
