@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { useRouter } from 'next/router';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import { withLayout } from '../../layout/Layout';
 import { MenuItem } from '../../interfaces/menu.interface';
@@ -7,7 +8,11 @@ import { ParsedUrlQuery } from 'querystring';
 import { API } from '../../helpers/api';
 
 function Type({ firstCategory }: TypeProps): JSX.Element {
-  return <>Type: {firstCategory}</>;
+  const router = useRouter();
+
+  // return <>Type: {firstCategory}</>;
+  // return <>Type: {router.query.type}</>;
+  return <>Выберите категорию</>;
 }
 
 export default withLayout(Type);
