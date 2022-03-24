@@ -120,14 +120,14 @@ export const Product = motion(
           initial='hidden'
           animate={isReviewOpened ? 'visible' : 'hidden'}
           transition={{ duration: 0.5 }}>
-          <Card color='blue' ref={reviewRef} className={cn(styles.reviews)}>
+          <Card color='blue' ref={reviewRef} tabIndex={isReviewOpened ? 0 : -1} className={cn(styles.reviews)}>
             {product.reviews.map((r) => (
               <div key={r._id}>
                 <Review review={r} />
                 <Divider />
               </div>
             ))}
-            <ReviewForm productId={product._id} />
+            <ReviewForm productId={product._id} isOpened={isReviewOpened} />
           </Card>
         </motion.div>
       </div>
