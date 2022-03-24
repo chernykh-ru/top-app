@@ -29,6 +29,21 @@
   grid-area: footer;
 }
 
+.skipLink {
+  display: block;
+  position: fixed;
+  left: 100px;
+  top: 0;
+  overflow: hidden;
+  height: 0;
+  background: var(--primary);
+  color: var(--white);
+}
+
+.displayed {
+  height: auto;
+}
+
 @media screen and (max-width: 768px) {
   .wrapper {
     grid-template-rows: auto 1fr auto;

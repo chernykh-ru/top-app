@@ -27,7 +27,7 @@
 
   font-weight: 300;
   font-size: 12px;
-  line-height: 16px;
+  /* line-height: 16px; */
   text-transform: uppercase;
 }
 
@@ -48,8 +48,10 @@
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
-  line-height: 19px;
+  /* line-height: 19px; */
   color: var(--gray-dark);
+
+  outline-offset: -1px;
 }
 
 .thirdLevelActive,

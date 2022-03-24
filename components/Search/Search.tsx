@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { useState } from 'react';
+import { useState, KeyboardEvent } from 'react';
 import { SearchProps } from './Search.props';
 import styles from './Search.module.css';
 import { Button } from '../Button/Button';
@@ -39,5 +39,5 @@ export const Search = ({ className, ...props }: SearchProps): JSX.Element => {
         <GlassIcon />
       </Button>
     </div>
-  ); 
+  );
 };
