@@ -6,21 +6,23 @@ import { AppContext } from '../../context/app.context';
 import { FirstLevelMenuItem, PageItem } from '../../interfaces/menu.interface';
 import styles from './Menu.module.css';
 import { firstLevelMenu } from '../../helpers/helpers';
-import { motion } from 'framer-motion';
-import { spawn } from 'child_process';
+import { motion, useReducedMotion } from 'framer-motion';
 
 export const Menu = (): JSX.Element => {
   const { menu, setMenu, firstCategory } = useContext(AppContext);
   const [announce, setAnnounce] = useState<'closed' | 'opened' | undefined>();
   const router = useRouter();
+  const shouldReduceMotion = useReducedMotion();
 
   const variants = {
     visible: {
       marginBottom: 20,
-      transition: {
-        when: 'beforeChildren',
-        staggerChildren: 0.1,
-      },
+      transition: shouldReduceMotion
+        ? {}
+        : {
+            when: 'beforeChildren',
+            staggerChildren: 0.1,
+          },
     },
     hidden: { marginBottom: 0 },
   };
@@ -31,7 +33,7 @@ export const Menu = (): JSX.Element => {
       // height: 29,
       height: 'auto',
     },
-    hidden: { opacity: 0, height: 0 },
+    hidden: { opacity: shouldReduceMotion ? 1 : 0, height: 0 },
   };
 
   const openSecondLevel = (secondCategory: string) => {
