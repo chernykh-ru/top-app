@@ -1,12 +1,29 @@
 # Описание проекта “top – app”
 
-## Стек: Next.JS – SSR & SSG, React, Docker, react-hook-form, framer-motion, husky.
+## Стек:
 
-## Язык: TypeScript.
+Next.JS – SSR & SSG, React, Docker, react-hook-form, framer-motion, husky.
 
-## Контейнер: Docker. Сборщик: Webpack. Линтинг: Stylelint.
+## Язык:
 
-## Layout: Figma & Grid
+TypeScript.
 
-## Accessibility: доступность с клавиатуры и Screen Reader
+## Контейнер:
 
+Docker.
+
+## Сборщик:
+
+Webpack.
+
+## Линтинг:
+
+Stylelint.
+
+## Layout:
+
+Figma & Grid.
+
+## Accessibility:
+
+доступность с клавиатуры и Screen Reader.
