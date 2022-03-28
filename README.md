@@ -1,8 +1,8 @@
 # Описание проекта “top – app”
 
-## Стек:
+## Стек: Next.JS – SSR & SSG
 
-Next.JS – SSR & SSG, React, Docker, react-hook-form, framer-motion, husky.
+React, Docker, react-hook-form, framer-motion, husky.
 
 ## Язык:
 
@@ -26,4 +26,4 @@ Figma & Grid.
 
 ## Accessibility:
 
-доступность с клавиатуры и Screen Reader.
+доступно с клавиатуры и Screen Reader.
