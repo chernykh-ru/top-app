@@ -1,14 +1,14 @@
 .wrapper {
   display: grid;
+
   min-height: 100vh;
   gap: 40px 30px;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: auto 230px minmax(320px, 1200px) auto;
-  grid-template-areas: 
+  grid-template-areas:
     ". header header ."
     ". sidebar body ."
-    "footer footer footer footer"
-    ;
+    "footer footer footer footer";
 }
 
 .header {
@@ -30,14 +30,17 @@
 }
 
 .skipLink {
-  display: block;
   position: fixed;
-  left: 100px;
   top: 0;
+  left: 100px;
+
+  display: block;
   overflow: hidden;
+
   height: 0;
-  background: var(--primary);
+
   color: var(--white);
+  background: var(--primary);
 }
 
 .displayed {
@@ -48,11 +51,10 @@
   .wrapper {
     grid-template-rows: auto 1fr auto;
     grid-template-columns: minmax(320px, 1fr);
-    grid-template-areas: 
+    grid-template-areas:
       "header"
       "body"
-      "footer"
-      ;
+      "footer";
     gap: 10px;
   }
 
@@ -63,5 +65,4 @@
   .sidebar {
     display: none !important;
   }
-
 }

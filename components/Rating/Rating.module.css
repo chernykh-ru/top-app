@@ -24,7 +24,8 @@
 
 .errorMessage {
   position: absolute;
-  left: 2px;
   bottom: -15px;
+  left: 2px;
+
   color: var(--red);
 }

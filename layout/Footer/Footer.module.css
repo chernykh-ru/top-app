@@ -1,11 +1,13 @@
 .footer {
+  display: grid;
+
+  padding: 25px 30px;
+
   color: var(--white);
   background: var(--primary);
-  padding: 25px 30px;
+
   font-size: 16px;
   line-height: 22px;
-
-  display: grid;
   grid-template-columns: 1fr auto auto;
   gap: 10px 40px;
 }
