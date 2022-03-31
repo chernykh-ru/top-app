@@ -4,9 +4,11 @@
 
 React, Docker, react-hook-form, framer-motion, husky.
 
-## Язык:
+## Deploy with Vercel:
 
-TypeScript.
+https://top-app-vercel.vercel.app/
+
+## Язык: TypeScript.
 
 ## Контейнер:
 
